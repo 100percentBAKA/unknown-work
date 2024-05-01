@@ -13,6 +13,6 @@ export const REGISTER_SCHEMA = yup.object().shape({
 });
 
 export const LOGIN_SCHEMA = yup.object().shape({
-    email: yup.string().email("Invalid email").required("Email is required"),
+    email: yup.string().email("Invalid email").required("Email is required").matches(/^.+@.+\..+$/, "Email must be valid"),
     password: yup.string().required("Password is required"),
 })

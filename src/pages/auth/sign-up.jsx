@@ -23,7 +23,7 @@ function SignUp() {
 
   return (
     <div>
-      <div className="flex flex-col space-y-1">
+      <div className="flex flex-col space-y-1 mb-6">
         <div className="font-bold text-2xl">Sign Up</div>
         <div className="text-sm">Enter the details mentioned below</div>
       </div>
@@ -119,7 +119,9 @@ function SignUp() {
                 value={formik.values.country}
                 className="w-full placeholder:text-[13px] h-[32px] rounded-md placeholder:pl-3"
               >
-                <option value="">Select Country</option>
+                <option value="ind">India</option>
+                <option value="ind">India</option>
+                <option value="ind">India</option>
                 {/* Add options for countries here */}
               </select>
               {formik.touched.country && formik.errors.country ? (

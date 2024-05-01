@@ -14,7 +14,7 @@ function AuthLayout() {
 
       {/* // ! right part */}
       <div className="w-full lg:w-[50%] lg:h-full flex flex-col items-center justify-center">
-        <div className="w-[75%] overflow-y-auto">
+        <div className="w-[75%] h-[85%] overflow-y-auto">
           <Outlet />
         </div>
       </div>
