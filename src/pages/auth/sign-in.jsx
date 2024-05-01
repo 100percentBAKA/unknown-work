@@ -69,7 +69,7 @@ function SignIn() {
           </button>
 
           <Link to="/auth/sign-up">
-            Don't have an account?{" "}
+            Dont have an account?{" "}
             <span className="text-blue-500 underline">Sign up</span>
           </Link>
         </div>
