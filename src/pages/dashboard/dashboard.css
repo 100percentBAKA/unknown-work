@@ -1,0 +1,127 @@
+/* dashboard.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 240px;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background-color: #34495e;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.header button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #2980b9;
+}
+
+/* Employee vs Regions Section Styles */
+.employee-region {
+  margin-bottom: 30px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-table {
+  margin-left: 20px;
+}
+
+.employee-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Department Breakdown Section Styles */
+.department-breakdown {
+  margin-bottom: 30px;
+}
+
+/* Dark Mode Styles */
+.dashboard.dark-mode {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+.dashboard.dark-mode .sidebar {
+  background-color: #333;
+}
+
+.dashboard.dark-mode .main-content {
+  background-color: #282828;
+}
+
+.dashboard.dark-mode .header button {
+  background-color: #3498db;
+}
+
+.dashboard.dark-mode .header button:hover {
+  background-color: #2980b9;
+}

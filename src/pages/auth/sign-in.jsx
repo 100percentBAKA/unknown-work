@@ -15,7 +15,7 @@ function SignIn() {
   });
 
   return (
-    <div>
+    <div className="">
       <div className="flex flex-col space-y-1">
         <div className="font-bold text-2xl">Sign In</div>
         <div className="text-sm">Enter your login details below</div>
@@ -35,7 +35,7 @@ function SignIn() {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               placeholder="Enter your email"
-              className="placeholder:text-[13px] h-[32px] rounded-md placeholder:pl-3"
+              className="placeholder:text-[13px] h-[32px] rounded-md placeholder:pl-3 px-5 py-3"
             />
             {formik.touched.email && formik.errors.email ? (
               <div className="error-text">{formik.errors.email}</div>
@@ -54,7 +54,7 @@ function SignIn() {
               onBlur={formik.handleBlur}
               value={formik.values.password}
               placeholder="Enter your password"
-              className="placeholder:text-[13px] h-[32px] rounded-md placeholder:pl-3"
+              className="placeholder:text-[13px] h-[32px] rounded-md placeholder:pl-3 px-5 py-3"
             />
             {formik.touched.password && formik.errors.password ? (
               <div className="error-text">{formik.errors.password}</div>
