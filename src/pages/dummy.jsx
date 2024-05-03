@@ -20,11 +20,43 @@ const data = [
   // Add more data as needed
 ];
 
+const EditEmployee = ({ onClose }) => {
+  return (
+    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-white p-8 rounded-lg">
+        <div className="flex items-center justify-between mb-4">
+          <div>Edit</div>
+          <div onClick={onClose}>X</div>
+        </div>
+
+        <div className="flex flex-col space-y-2 items-center justify-center">
+          <label htmlFor="fullname">FullName</label>
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            className="p-4 pl-3 rounded-md"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function Employee() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openEditModal = () => {
+    setIsEditModalOpen(true);
+  };
+
+  const closeEditModal = () => {
+    setIsEditModalOpen(false);
   };
 
   return (
@@ -122,7 +154,10 @@ function Employee() {
                     </button>
                     {isMenuOpen && (
                       <div className="absolute top-[200px] mt-2 w-48 bg-white rounded-lg shadow-xl py-2">
-                        <button className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">
+                        <button
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                          onClick={openEditModal}
+                        >
                           Edit
                         </button>
                         <button className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left">
@@ -140,6 +175,7 @@ function Employee() {
           </tbody>
         </table>
       </div>
+      {isEditModalOpen && <EditEmployee onClose={closeEditModal} />}
     </div>
   );
 }
